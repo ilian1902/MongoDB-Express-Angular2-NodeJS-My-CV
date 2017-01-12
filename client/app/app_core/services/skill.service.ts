@@ -12,4 +12,12 @@ export class SkillService{
         return this.http.get('/api/skills')
         .map(res => res.json());
     }
+
+    addSkill(newSkill:any){
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('api/skill', JSON.stringify(newSkill), {headers:headers})
+        .map(res => res.json());
+       
+    }
 }

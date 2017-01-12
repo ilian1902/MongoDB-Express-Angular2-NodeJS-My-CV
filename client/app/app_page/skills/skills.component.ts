@@ -21,8 +21,13 @@ export class SkillsComponent  {
             event.preventDefault();
             let newSkill = {
                 title : this.title,
-                rate: 40
+                rate: this.rate
             }
-            this.skills.push(newSkill);
+            this.skillService.addSkill(newSkill)
+            .subscribe(skill => {
+                this.skills.push(skill);
+                this.title = '';
+                this.rate = null;
+            })
         }
 }

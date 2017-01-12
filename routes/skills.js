@@ -25,9 +25,9 @@ router.get('/skill/:id', function(req, res, next) {
 
 // Save skill
 
-router.post('/task', function(req, res, next) {
+router.post('/skill', function(req, res, next) {
     let skill = req.body;
-    if (!skill.title || !(skill.rate + "")) {
+    if (!skill.title || !(skill.rate + '')) {
         res.status(400);
         res.json({
             "error": "Bad data"
