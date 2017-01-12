@@ -5,7 +5,7 @@ import { SkillService } from './app_core/services/skill.service';
   moduleId: module.id,
   selector: 'my-app',
   templateUrl: './app.component.html',
-  providers:[SkillService]
+  providers: [SkillService]
 })
 export class AppComponent  {
 

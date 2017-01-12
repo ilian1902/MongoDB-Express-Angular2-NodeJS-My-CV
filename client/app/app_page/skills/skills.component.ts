@@ -11,7 +11,7 @@ export class SkillsComponent  {
     skills: SkillModel[];
     constructor(private skillService: SkillService){
         this.skillService.getSkills()
-        .subscribe(skills => console.log(skills));
+        .subscribe(skills => this.skills = skills);
     }
 
     
