@@ -13,11 +13,16 @@ export class SkillService{
         .map(res => res.json());
     }
 
-    addSkill(newSkill:any){
+    addSkill(newSkill: any){
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('api/skill', JSON.stringify(newSkill), {headers:headers})
         .map(res => res.json());
        
+    }
+
+    deleteSkill(id: any){
+        return this.http.delete('api/skill/' + id)
+        .map(res => res.json());
     }
 }
