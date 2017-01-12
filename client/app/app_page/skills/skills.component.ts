@@ -9,10 +9,20 @@ import { SkillModel } from '../../app_core/models/skill.model';
 })
 export class SkillsComponent  {
     skills: SkillModel[];
+    title: string;
+    rate: number;
+
     constructor(private skillService: SkillService){
         this.skillService.getSkills()
         .subscribe(skills => this.skills = skills);
     }
 
-    
+        addSkill(event:any){
+            event.preventDefault();
+            let newSkill = {
+                title : this.title,
+                rate: 40
+            }
+            this.skills.push(newSkill);
+        }
 }
