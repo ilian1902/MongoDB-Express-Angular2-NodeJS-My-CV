@@ -2,15 +2,25 @@
 <div class="container">
     <header>
         <router-outlet>
-            <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
-
-                <a class="navbar-brand" href="#">Navbar</a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" routerLink="">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" routerLink="skills">Skills</a>
-                        <a class="nav-item nav-link" routerLink="skill/create">Add skill</a>
-                        <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Brand</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a routerLink="">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a routerLink="skills">Skills</a></li>
+                            <li>
+                                <a routerLink="skill/create">Add Skill</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Log In</a></li>
+                            <li>
+                                <a href="#">Log out</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </nav>
