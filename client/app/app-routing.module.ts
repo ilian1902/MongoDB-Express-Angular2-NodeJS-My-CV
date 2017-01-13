@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 //import { AuthGuardService } from './app_core/services/auth-guard.service';
-
+import { AuthGuardService } from './app_core/services/auth-guard.service';
 import { AppComponent } from './app.component';
 //import { RegisterComponent } from './app_pages/register/register.component';
-//import { LoginComponent } from './app_pages/login/login.component';
+import { LoginComponent } from './app_page/login/login.component';
 import { HomeComponent } from './app_page/home/home.component';
 //import { AboutComponent } from './app_pages/about/about.component';
 //import { AdventuresComponent } from './app_pages/adventures/adventures.component';
@@ -18,7 +18,7 @@ import { AddSkillComponent } from './app_page/skills/add-skill.component';
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   //{ path: 'register', component: RegisterComponent },
-  //{ path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   //{ path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent},//, canActivate: [AuthGuardService] },
