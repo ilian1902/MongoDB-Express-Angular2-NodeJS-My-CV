@@ -1,0 +1,8 @@
+<ng-content></ng-content>
+<form class="well">
+    <div class="form-group">
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add skill...">
+        <input type="number" [(ngModel)]="rate" name="rate" class="form-control" placeholder="Add rate...">
+        <input type="button" class="btn btn-success" value="Add" (click)="addSkill($event)">
+    </div>
+</form>

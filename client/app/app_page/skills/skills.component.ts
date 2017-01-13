@@ -17,31 +17,31 @@ export class SkillsComponent  {
         .subscribe(skills => this.skills = skills);
     }
 
-        addSkill(event:any){
-            event.preventDefault();
-            let newSkill = {
-                title : this.title,
-                rate: this.rate
-            }
-            this.skillService.addSkill(newSkill)
-            .subscribe(skill => {
-                this.skills.push(skill);
-                this.title = '';
-                this.rate = null;
-            })
-        }
+        // addSkill(event:any){
+        //     event.preventDefault();
+        //     let newSkill = {
+        //         title : this.title,
+        //         rate: this.rate
+        //     }
+        //     this.skillService.addSkill(newSkill)
+        //     .subscribe(skill => {
+        //         this.skills.push(skill);
+        //         this.title = '';
+        //         this.rate = null;
+        //     })
+        // }
 
-        deleteSkill(id:any){
-            let skills = this.skills;
-            this.skillService.deleteSkill(id)
-            .subscribe(data => {
-                if(data.n == 1){
-                    for(let i = 0; i < skills.length; i++){
-                        if(skills[i]._id == id){
-                            skills.splice(i, 1);
-                        }
-                    }
-                }
-            })
-        }
+        // deleteSkill(id:any){
+        //     let skills = this.skills;
+        //     this.skillService.deleteSkill(id)
+        //     .subscribe(data => {
+        //         if(data.n == 1){
+        //             for(let i = 0; i < skills.length; i++){
+        //                 if(skills[i]._id == id){
+        //                     skills.splice(i, 1);
+        //                 }
+        //             }
+        //         }
+        //     })
+        // }
 }
