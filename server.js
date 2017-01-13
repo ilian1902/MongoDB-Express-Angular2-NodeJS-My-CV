@@ -4,6 +4,7 @@ let bodyParser = require('body-parser');
 
 let index = require('./routes/index');
 let skills = require('./routes/skills');
+let users = require('./routes/users');
 
 let app = express();
 
@@ -23,6 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', index);
 app.use('/api', skills);
+app.use('/skills', index);
+app.use('/home', index);
+app.use('/api', users);
 
 app.listen(port, function() {
     console.log('Server started on port ' + port);
